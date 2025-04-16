@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.4.4</version>
+	</parent>
+	<artifactId>springartemis</artifactId>
+	<groupId>vmfvmf.com</groupId>
+	<name>Spring Boot Actuator Sample</name>
+	<description>Spring Boot Artemis</description>
+	<version>0.0.1-SNAPSHOT</version>
+	<url>https://vmfvmf.com/2025/04/16/%f0%9f%93%a8-modern-messaging-with-spring-boot-and-artemismq/</url>
+	<organization>
+		<name>VMFVMF</name>
+		<url>https://vmfvmf.com</url>
+	</organization>
+	<properties>
+		<main.basedir>${basedir}/../..</main.basedir>
+	</properties>
+	<dependencies>
+		<dependency>
+		    <groupId>org.springframework.boot</groupId>
+	    	<artifactId>spring-boot-starter-artemis</artifactId>
+	   </dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+		  <groupId>org.springframework.boot</groupId>
+		  <artifactId>spring-boot-starter-test</artifactId>
+		  <scope>test</scope>
+		</dependency>
+		<dependency>
+		  <groupId>org.apache.activemq</groupId>
+		  <artifactId>artemis-jms-server</artifactId>
+		  <scope>test</scope>
+		</dependency>
+		<dependency>
+		  <groupId>org.awaitility</groupId>
+		  <artifactId>awaitility</artifactId>
+		  <scope>test</scope>
+		</dependency>
+
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+</project>

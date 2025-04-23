@@ -4,6 +4,15 @@ public class Main {
 	enum Status { ACTIVE, INACTIVE, ERROR }
 
 	public static void main(String[] args) {
+		Object obj = "Hello";
+
+		switch (obj) {
+		    case String s -> System.out.println("String: " + s.toUpperCase());
+		    case Integer i -> System.out.println("Integer + 1: " + (i + 1));
+		    case null -> System.out.println("It's null!");
+		    default -> System.out.println("Unknown type");
+		}
+		
 		INotification n = new Email("support@example.com", "Welcome", "Hello!");
 		System.out.println(switchSealedIterface(n));
 		

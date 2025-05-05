@@ -1,0 +1,8 @@
+🧪 Summary Table (Behavior Comparison)
+Scope		Instance Lifetime		Managed by Spring	Shared?
+singleton	App start → end			✅ Full lifecycle	✅ Across beans
+prototype	New every request		🚫 Only creation	❌
+request		One per HTTP request	✅ Full lifecycle	❌
+session		One per session			✅ Full lifecycle	❌
+app			One per app context		✅ Full lifecycle	✅ Across users
+websocket	One per WebSocket conn	✅ Full lifecycle	❌
